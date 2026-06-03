@@ -44,5 +44,10 @@ namespace Projeto_BancoDados.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+        public IActionResult ExcluirUsuario(int id) 
+        {
+            _usuarioRepository.Excluir(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
